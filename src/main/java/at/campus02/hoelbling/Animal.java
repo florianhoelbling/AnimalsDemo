@@ -58,4 +58,5 @@ public class Animal {
     private String getNameAndAge() {
         return getName() + " (" + getAge() + ")";
     }
+
 }
