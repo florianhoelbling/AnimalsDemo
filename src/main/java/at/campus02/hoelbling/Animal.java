@@ -40,7 +40,7 @@ public class Animal {
     }
 
     private String giveAnimalLoud() {
-        switch (species) {
+        switch (getSpecies()) {
             case "Löwe":
                 setAnimalLoud("Roarr");
                 return getAnimalLoud();
@@ -55,8 +55,5 @@ public class Animal {
         }
     }
 
-    private String getNameAndAge() {
-        return getName() + " (" + getAge() + ")";
-    }
 
 }
