@@ -43,4 +43,12 @@ class AnimalTest {
         assertEquals("Mia (5)", animal3.getNameAndAge());
     }
 
+    @Test
+    @DisplayName("Check ageCategory")
+    void ageCategory() {
+        assertEquals("baby animal", animal1.getAgeCategory());
+        assertEquals("young animal", animal2.getAgeCategory());
+        assertEquals("old anmimal", animal3.getAgeCategory());
+    }
+
 }
