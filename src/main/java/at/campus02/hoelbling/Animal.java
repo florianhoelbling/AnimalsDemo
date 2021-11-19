@@ -1,19 +1,20 @@
 package at.campus02.hoelbling;
 
-import java.security.SecureRandom;
-
 public class Animal {
 
     private String name;
     private int age;
     private String species;
     private String animalLoud;
+    private String nameAndAge;
+    private String ageCategory;
 
     public Animal(String name, int age, String species) {
         this.name = name;
         this.age = age;
         this.species = species;
         giveAnimalLoud();
+        ageCategory();
     }
 
     public String getName() {
@@ -48,9 +49,26 @@ public class Animal {
         this.animalLoud = animalLoud;
     }
 
+    public void setNameAndAge(String nameAndAge) {
+        this.nameAndAge = nameAndAge;
+    }
+
+    public String getNameAndAge() {
+        setNameAndAge(getName() + " (" + getAge() + ")");
+        return this.nameAndAge;
+    }
+
+    public String getAgeCategory() {
+        return ageCategory;
+    }
+
+    public void setAgeCategory(String ageCategory) {
+        this.ageCategory = ageCategory;
+    }
+
     private String giveAnimalLoud() {
         switch (getSpecies()) {
-            case "Löwe":
+            case "Loewe":
                 setAnimalLoud("Roarr");
                 return getAnimalLoud();
             case "Hund":
@@ -64,17 +82,14 @@ public class Animal {
         }
     }
 
-    private String getNameAndAge() {
-        return getName() + " (" + getAge() + ")";
-    }
-
     private String ageCategory() {
         if (getAge() <= 2) {
-            return "baby animal";
+            this.ageCategory = "baby animal";
         } else if (getAge() <= 4) {
-            return "young animal";
+            this.ageCategory = "young animal";
         } else {
-            return "old anmimal";
+            this.ageCategory = "old anmimal";
         }
+        return ageCategory;
     }
 }

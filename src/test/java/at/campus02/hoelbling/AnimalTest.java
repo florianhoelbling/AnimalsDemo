@@ -16,7 +16,7 @@ class AnimalTest {
     @BeforeEach
     void setUp() {
         a = 1;
-        animal1 = new Animal("Max", 2, "Löwe");
+        animal1 = new Animal("Max", 2, "Loewe");
         animal2 = new Animal("Oskar", 4, "Hund");
         animal3 = new Animal("Mia", 5, "Katze");
     }
@@ -33,6 +33,14 @@ class AnimalTest {
         assertEquals("Roarr", animal1.getAnimalLoud());
         assertEquals("Wuff", animal2.getAnimalLoud());
         assertEquals("Miau", animal3.getAnimalLoud());
+    }
+
+    @Test
+    @DisplayName("Check getNameAndAge")
+    void getNameAndAge() {
+        assertEquals("Max (2)", animal1.getNameAndAge());
+        assertEquals("Oskar (4)", animal2.getNameAndAge());
+        assertEquals("Mia (5)", animal3.getNameAndAge());
     }
 
 }
