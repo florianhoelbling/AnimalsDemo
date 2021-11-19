@@ -55,5 +55,19 @@ public class Animal {
         }
     }
 
+    private String getNameAndAge() {
+        return getName() + " (" + getAge() + ")";
+    }
+
+    private String ageCategory() {
+        if (getAge() <= 2) {
+             return "baby animal";
+        } else if (getAge() <= 4) {
+            return "young animal";
+        } else {
+            return "old anmimal";
+        }
+    }
+
 
 }
