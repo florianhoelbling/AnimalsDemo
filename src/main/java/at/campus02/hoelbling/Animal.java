@@ -1,11 +1,20 @@
 package at.campus02.hoelbling;
 
+import java.security.SecureRandom;
+
 public class Animal {
 
     private String name;
     private int age;
     private String species;
     private String animalLoud;
+
+    public Animal(String name, int age, String species) {
+        this.name = name;
+        this.age = age;
+        this.species = species;
+        giveAnimalLoud();
+    }
 
     public String getName() {
         return name;
@@ -61,13 +70,11 @@ public class Animal {
 
     private String ageCategory() {
         if (getAge() <= 2) {
-             return "baby animal";
+            return "baby animal";
         } else if (getAge() <= 4) {
             return "young animal";
         } else {
             return "old anmimal";
         }
     }
-
-
 }
