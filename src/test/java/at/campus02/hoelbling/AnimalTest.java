@@ -1,6 +1,7 @@
 package at.campus02.hoelbling;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,8 +22,17 @@ class AnimalTest {
     }
 
     @Test
+    @DisplayName("myFirstTest")
     void myFirstTest() {
         assertTrue(a > 0);
+    }
+
+    @Test
+    @DisplayName("Check giveAnimalLoud")
+    void giveAnimalLoud() {
+        assertEquals("Roarr", animal1.getAnimalLoud());
+        assertEquals("Wuff", animal2.getAnimalLoud());
+        assertEquals("Miau", animal3.getAnimalLoud());
     }
 
 }
