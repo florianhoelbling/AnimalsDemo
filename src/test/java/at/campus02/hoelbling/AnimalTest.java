@@ -30,9 +30,9 @@ class AnimalTest {
     @Test
     @DisplayName("Check giveAnimalLoud")
     void giveAnimalLoud() {
-        assertEquals("Roarr", animal1.getAnimalLoud());
-        assertEquals("Wuff", animal2.getAnimalLoud());
-        assertEquals("Miau", animal3.getAnimalLoud());
+        assertEquals("Roarr", animal1.giveAnimalLoud());
+        assertEquals("Wuff", animal2.giveAnimalLoud());
+        assertEquals("Miau", animal3.giveAnimalLoud());
     }
 
     @Test
@@ -46,9 +46,9 @@ class AnimalTest {
     @Test
     @DisplayName("Check ageCategory")
     void ageCategory() {
-        assertEquals("baby animal", animal1.getAgeCategory());
-        assertEquals("young animal", animal2.getAgeCategory());
-        assertEquals("old anmimal", animal3.getAgeCategory());
+        assertEquals("baby animal", animal1.ageCategory());
+        assertEquals("young animal", animal2.ageCategory());
+        assertEquals("old anmimal", animal3.ageCategory());
     }
 
 }
